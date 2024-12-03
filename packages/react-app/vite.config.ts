@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
-import { join } from 'path';
+import { join, resolve } from 'path';
 
 export default defineConfig({
   root: __dirname,
@@ -14,6 +14,14 @@ export default defineConfig({
       tsconfigPath: join(__dirname, 'tsconfig.app.json'),
     }),
   ],
+  resolve: {
+    alias: [
+      {
+        find: "@nxdemo/common",
+        replacement: resolve(__dirname, '../common/src/'),
+      }
+    ]
+  },
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],

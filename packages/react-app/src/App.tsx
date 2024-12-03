@@ -2,9 +2,11 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {common} from "@nxdemo/common";
 
 function App() {
   const [count, setCount] = useState(0)
+    console.log(common());
 
   return (
     <>
