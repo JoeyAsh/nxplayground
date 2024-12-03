@@ -8,6 +8,9 @@
     },
     {
       "path": "./packages/react-app"
+    },
+    {
+      "path": "./packages/utils"
     }
   ]
 }
