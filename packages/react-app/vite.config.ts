@@ -8,11 +8,7 @@ export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/react-app',
   plugins: [
-    react(),
-    dts({
-      entryRoot: 'src',
-      tsconfigPath: join(__dirname, 'tsconfig.app.json'),
-    }),
+    react()
   ],
   resolve: {
     alias: [
